@@ -18,14 +18,13 @@ export default function Checkout() {
             city: ''
         },
         validationSchema: Schema,
-        onSubmit: () => HandelCheckout(cart.cartId, 'https://username.github.io/Fresh_Cart/')
+        onSubmit: () => HandelCheckout(cart.cartId, 'https://Hanan3amer.github.io/Fresh_Cart/')
     })
-    async function HandelCheckout(cartId) {
-        const baseUrl = window.location.origin;
-        let { data } = await checkout(cartId, baseUrl, formik.values);
+    async function HandelCheckout(cartId, url) {
+        let {data} = await checkout(cartId, url, formik.values)
         console.log(data);
         if (data.status === 'success') {
-            window.location.href = data.session.url;
+            window.location.href = data.session.url
         }
     }
     return (
