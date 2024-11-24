@@ -18,7 +18,7 @@ export default function Checkout() {
             city: ''
         },
         validationSchema: Schema,
-        onSubmit: () => HandelCheckout(cart.cartId, 'http://localhost:5173')
+        onSubmit: () => HandelCheckout(cart.cartId, 'https://hanan3amer.github.io/Fresh_Cart/#')
     })
     async function HandelCheckout(cartId, url) {
         let {data} = await checkout(cartId, url, formik.values)
