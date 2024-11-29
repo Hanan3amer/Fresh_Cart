@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 export default function Layout() {
   return (
 
-    <>
+    <div className='flex flex-col justify-between items-center h-lvh'>
 
       <Navbar />
 
@@ -16,7 +16,6 @@ export default function Layout() {
 
       <Footer />
 
-
-    </>
+    </div>
   );
 }
