@@ -6,7 +6,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { AuthContext } from '../../Context/Authcontext';
 export default function Signup() {
-
   let navigate = useNavigate();
   let { SetuserLogin } = useContext(AuthContext)
   let [ApiError, setApiError] = useState('')
@@ -21,6 +20,7 @@ export default function Signup() {
           navigate('/')
           setLoading(false)
         }
+        
       })
       .catch((ApiReasponse) => {
         setLoading(false)
@@ -54,8 +54,6 @@ export default function Signup() {
     <>
 
       <div className="row flex md:flex-row flex-col justify-center items-center">
-
-
         <div className="md:w-1/2 mb-4 md:mb-0">
           <img src={signup} alt='signup' className="w-3/4 mx-auto" />
         </div>

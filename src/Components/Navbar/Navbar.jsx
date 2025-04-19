@@ -46,7 +46,6 @@ export default function Navbar() {
               role="button"
               className="btn btn-ghost btn-circle inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-green-500 dark:hover:bg-gray-200"
               aria-controls="navbar-sticky"
-              onClick={toggleMobileMenu}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +61,7 @@ export default function Navbar() {
               </svg>
             </div>
           </div>
-          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <div  className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:border-gray-700">
               {userLogin ? <>
                 <li className=' mx-4 text-slate-600 font-normal'><NavLink to={'/'}>Home</NavLink></li>
