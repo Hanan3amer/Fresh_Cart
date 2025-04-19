@@ -23,8 +23,12 @@ export default function Wishlist() {
   }
 
   useEffect(() => {
-    getWhish();
+    const token = localStorage.getItem("userToken");
+    if (token) {
+      getWhish();
+    }
   }, []);
+  
   return (
     <>
       <div className="relative overflow-x-auto sm:rounded-lg border">
