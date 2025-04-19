@@ -30,7 +30,7 @@ export default function Whishlistcontextprovider(props)
 
     async function Getwhishlist() {
         let response = await getWhishlist()
-        setWhishlist(response?.data)
+        setwhishlist(response?.data)
     }
 
     function removewhishlist(productId) {
